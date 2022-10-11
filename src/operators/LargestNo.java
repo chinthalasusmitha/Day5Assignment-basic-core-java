@@ -1,19 +1,35 @@
 package operators;
 
+import java.util.Scanner;
+
 public class LargestNo {
 
         public static void main(String[] args){
 
-            double n1 = 50, n2 = 60, n3 = 20;
+            Scanner sc = new Scanner(System.in);
+            System.out.println("Enter the 1st Number : ");
+            int num1 = sc.nextInt();
 
-            if( n1 >= n2 && n1 >= n3)
-                System.out.println(n1 + " is the largest number.");
+            System.out.println("Enter the 2nd Number : ");
+            int num2 = sc.nextInt();
 
-            else if (n2 >= n1 && n2 >= n3)
-                System.out.println(n2 + " is the largest number.");
+            System.out.println("Enter the 3rd Number : ");
+            int num3 = sc.nextInt();
 
-            else
-                System.out.println(n3 + " is the largest number.");
+            if(num1 > num2){
+                if(num1 > num3){
+                    System.out.println("Largest among the three numbers is "+num1);
+                }else{
+                    System.out.println("Largest among the three numbers is "+num3);
+                }
+            }else{
+                if(num2 > num3){
+                    System.out.println("Largest among the three numbers is "+num2);
+                }else{
+                    System.out.println("Largest among the three numbers is "+num3);
+                }
+            }
+
         }
-    }
 
+    }
